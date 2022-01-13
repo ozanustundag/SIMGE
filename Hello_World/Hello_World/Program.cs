@@ -1,45 +1,54 @@
 ﻿using System;
 using System.Linq;
 
-namespace Hello_World 
+namespace Hello_World
 {
-    class Program 
+    class Program
     {
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
-            //int[] grades = { 900, 54, 5464, 5454 };
-            //int[] students = new int[20];
-            //Console.WriteLine(grades[1] + " " + students[0]);
-
-            //int size = Convert.ToInt32(Console.ReadLine());
-            //int[] grades = new int[size];
-
-            //for (int i = 0; i < grades.Length; i++)
-            //{
-            //    grades[i] = Convert.ToInt32(Console.ReadLine());
-            //}
-            //for (int i = 0; i < grades.Length; i++)
-            //{
-            //    Console.WriteLine(grades[i]);
-            //}
-
-            //searching array
-
-            int[] grades = { 20, 45, 65, 646 };
-            int[] grades2 = { 20, 45, 65, 646 };
-            Console.WriteLine(Array.IndexOf(grades, 45));
-            //array sort
-          //  Array.Sort(grades);
-          //  Array.Reverse(grades);
-            for (int i = 0; i < grades.Length; i++)
+            int[,] grades = new int[2, 3]
             {
-                Console.WriteLine(grades[i]);
+                {2,4,5 },
+                {4,84,95}
+            };
+            int[,] grads2 =
+            {
+                {4,5,5,5 },
+                {4,8,9,6 },
+                {1,4,6,8 }
+            };
+            int[][] grads3 =
+            {
+                new int[] {4,7,8},
+                new int[] { 1},
+                new int[] {2,3}
+            };
+
+            Console.WriteLine(grads3.Length);
+            Console.WriteLine(grads3[1].Length);
+
+            for (int i = 0; i < grads3.Length; i++)
+            {
+                for (int k = 0; k < grads3[i].Length; k++)
+                {
+                    Console.Write(grads3[i][k] +" ");
+                }
+                Console.WriteLine();
             }
 
-            if (Enumerable.SequenceEqual(grades,grades2))
+            Console.WriteLine(grades.GetLength(0));
+            Console.WriteLine(grades.GetLength(1));
+
+            for (int i = 0; i < grades.GetLength(0); i++)
             {
-                Console.WriteLine("equal");
+                for (int k = 0; k < grades.GetLength(1); k++)
+                {
+                    Console.Write(grades[i,k] + " ");
+                }
+                Console.WriteLine();
             }
         }
     }
-}
+}   
+
