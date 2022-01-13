@@ -6,23 +6,13 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            string name = "ozan";
-            name += "ustundag";
-            char[] chracters = { 'h', 'e', 'l', 'l', 'o' };
-            string greeting = new string(chracters);
-            Console.WriteLine(greeting);
+            Person ozan = new Person();
 
-            string message = $"Hello, my name is {name}, and ı want to say {greeting}";
-            Console.WriteLine(message);
-            
+            ozan.FirstName = "ozan";
+            ozan.SurName = "ustundag";
 
-
-
-
-
-        }
-
-
-            
+            Console.WriteLine(ozan.GetFullName());
+            Console.WriteLine(ozan.FullName);
+        }           
     }
 }
