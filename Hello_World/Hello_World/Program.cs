@@ -6,14 +6,28 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            // expression ? true: false
+            // loops 
+            //while loop
 
-            bool answer = true;
+            int i = 0;
+            //while (i<10)
+            //{
+            //    Console.WriteLine(i);
+            //        i++;
+            //}
 
-            int score = answer ? 10 : 0;
-            Console.WriteLine(score);
+            do
+            {
+                Console.WriteLine(i);
+            }
+            while (false);
+            //for loops
 
-            
+            for (int x = 0; x < 5; x++)
+            {
+                Console.WriteLine(x);
+            }
+
        
         }           
     }
