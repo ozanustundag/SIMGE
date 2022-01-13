@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Hello_World 
 {
@@ -6,21 +7,39 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            for (int i = 0; i < 10; i++)
+            //int[] grades = { 900, 54, 5464, 5454 };
+            //int[] students = new int[20];
+            //Console.WriteLine(grades[1] + " " + students[0]);
+
+            //int size = Convert.ToInt32(Console.ReadLine());
+            //int[] grades = new int[size];
+
+            //for (int i = 0; i < grades.Length; i++)
+            //{
+            //    grades[i] = Convert.ToInt32(Console.ReadLine());
+            //}
+            //for (int i = 0; i < grades.Length; i++)
+            //{
+            //    Console.WriteLine(grades[i]);
+            //}
+
+            //searching array
+
+            int[] grades = { 20, 45, 65, 646 };
+            int[] grades2 = { 20, 45, 65, 646 };
+            Console.WriteLine(Array.IndexOf(grades, 45));
+            //array sort
+          //  Array.Sort(grades);
+          //  Array.Reverse(grades);
+            for (int i = 0; i < grades.Length; i++)
             {
-                Console.WriteLine(i);
-                if (i==5)
-                {
-                    continue;
-                }
+                Console.WriteLine(grades[i]);
             }
-            Console.WriteLine("ozan");
 
-            //Break ve Continue'nın kullanım mantığı çok basittir. Döngü çalışması sırasında Continue
-            //ile karşılaşıldığı zaman continue'nin altında kalan kısım atlanır
-            //ve tekrar döngünün başına dönülür. Break'te ise döngü tamamen kırılıp daha
-            //dönecek sayaç'ı olmasına rağmen döngü biter.
-
+            if (Enumerable.SequenceEqual(grades,grades2))
+            {
+                Console.WriteLine("equal");
+            }
         }
     }
 }
