@@ -1,0 +1,14 @@
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\bin\Debug\netcoreapp3.1\Hello_World.exe
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\bin\Debug\netcoreapp3.1\Hello_World.deps.json
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\bin\Debug\netcoreapp3.1\Hello_World.runtimeconfig.json
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\bin\Debug\netcoreapp3.1\Hello_World.runtimeconfig.dev.json
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\bin\Debug\netcoreapp3.1\Hello_World.dll
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\bin\Debug\netcoreapp3.1\Hello_World.pdb
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\obj\Debug\netcoreapp3.1\Hello_World.csproj.AssemblyReference.cache
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\obj\Debug\netcoreapp3.1\Hello_World.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\obj\Debug\netcoreapp3.1\Hello_World.AssemblyInfoInputs.cache
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\obj\Debug\netcoreapp3.1\Hello_World.AssemblyInfo.cs
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\obj\Debug\netcoreapp3.1\Hello_World.csproj.CoreCompileInputs.cache
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\obj\Debug\netcoreapp3.1\Hello_World.dll
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\obj\Debug\netcoreapp3.1\Hello_World.pdb
+C:\Users\ozanu\Desktop\SIMGE\Hello_World\Hello_World\obj\Debug\netcoreapp3.1\Hello_World.genruntimeconfig.cache
