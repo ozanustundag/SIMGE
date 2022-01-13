@@ -6,29 +6,21 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            // loops 
-            //while loop
-
-            int i = 0;
-            //while (i<10)
-            //{
-            //    Console.WriteLine(i);
-            //        i++;
-            //}
-
-            do
+            for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(i);
+                if (i==5)
+                {
+                    continue;
+                }
             }
-            while (false);
-            //for loops
+            Console.WriteLine("ozan");
 
-            for (int x = 0; x < 5; x++)
-            {
-                Console.WriteLine(x);
-            }
+            //Break ve Continue'nın kullanım mantığı çok basittir. Döngü çalışması sırasında Continue
+            //ile karşılaşıldığı zaman continue'nin altında kalan kısım atlanır
+            //ve tekrar döngünün başına dönülür. Break'te ise döngü tamamen kırılıp daha
+            //dönecek sayaç'ı olmasına rağmen döngü biter.
 
-       
-        }           
+        }
     }
 }
