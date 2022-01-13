@@ -6,15 +6,10 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            string x = "Hacettepe";
-            Console.WriteLine(x);
+            int y; //decleration
+            y = 5; // initialization
+            Console.WriteLine(y);
 
-            //variables  - stroes values 
-            //identifier - what we call the variable
-            //expression -evaluates to value
-            // operator - it works on operands
-            // operand - the thing(s) that operator works on
-            //literal - actual value
           
         }
             
