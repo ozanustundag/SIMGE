@@ -6,30 +6,23 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            Person ozan = new Person();
+            string name = "ozan";
 
-            ozan.FirstName = "ozan";
-            ozan.SurName = "ustundag";
+            switch (name)
+            {
+                case "ozan":
+                    Console.WriteLine("cool name");
+                    return;
+                case "aslı":
+                    Console.WriteLine("not cool ");
+                    break;
+                 default:
+                    Console.WriteLine("you r nothing");
+                    break;
 
-            //Console.WriteLine(ozan.GetFullName());
-            //Console.WriteLine(ozan.FullName);
-            Console.WriteLine("Guess name: ");
-            string guess1 = Console.ReadLine();
-            Console.WriteLine("second guess for name:");
-            string guess2 = Console.ReadLine();
 
-            if (guess1 == ozan.FullName)
-            {
-                Console.WriteLine("+1 point");
             }
-            else if (guess2 == ozan.FullName)
-            {
-                Console.WriteLine("+1/2 point ");
-            }
-            else
-            {
-                Console.WriteLine("0 point");
-            }
+       
         }           
     }
 }
