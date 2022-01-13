@@ -6,32 +6,15 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            //int a = -5;
-            //int b = a;
+            string name = "ozan";
+            name += "ustundag";
+            char[] chracters = { 'h', 'e', 'l', 'l', 'o' };
+            string greeting = new string(chracters);
+            Console.WriteLine(greeting);
 
-            //Console.WriteLine(a);
-            //Console.WriteLine(b);
-
-            //b = -10;
-            //Console.WriteLine(a);
-            //Console.WriteLine(b);
-
-            //int[] a = { -5 };
-            //int[] b = a;
-
-            //Console.WriteLine(a[0]);
-            //Console.WriteLine(b[0]);
-
-            //b[0] = 1;
-
-            //Console.WriteLine(a[0]);
-            //Console.WriteLine(b[0]);
-            int a = 5;
-            int[] b = { 5 };
-
-            Test(a,b);
-            Console.WriteLine(a + " " + b[0] );
-
+            string message = $"Hello, my name is {name}, and ı want to say {greeting}";
+            Console.WriteLine(message);
+            
 
 
 
@@ -39,11 +22,7 @@ namespace Hello_World
 
         }
 
-        static void Test(int x, int[] y)
-        {
-            x = 100;
-            y[0] = 100;
-        }
+
             
     }
 }
