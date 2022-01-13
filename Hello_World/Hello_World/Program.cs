@@ -6,22 +6,14 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            string name = "ozan";
+            // expression ? true: false
 
-            switch (name)
-            {
-                case "ozan":
-                    Console.WriteLine("cool name");
-                    return;
-                case "aslı":
-                    Console.WriteLine("not cool ");
-                    break;
-                 default:
-                    Console.WriteLine("you r nothing");
-                    break;
+            bool answer = true;
 
+            int score = answer ? 10 : 0;
+            Console.WriteLine(score);
 
-            }
+            
        
         }           
     }
