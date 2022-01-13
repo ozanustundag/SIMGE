@@ -6,9 +6,17 @@ namespace Hello_World
     {
         static void Main(string[] args) 
         {
-            int y; //decleration
-            y = 5; // initialization
-            Console.WriteLine(y);
+            //simple data types
+            int a = 5;
+            uint b = 3;
+            float c = 2.2f;
+            decimal d = 4.2M;
+            bool e = true;
+            double f = 2.5;
+            char g = 's';
+            string o = "ozan";
+            
+
 
           
         }
