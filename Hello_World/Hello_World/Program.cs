@@ -17,10 +17,11 @@ namespace Hello_World
         {
             //ı m doing something
             User ozan = new User();
-            ozan.Name = "Ozan";
+           // ozan.Name = "Ozan";
             ozan.SurName = "ustundag";
             ozan.age = 12;
-            Console.WriteLine(ozan.Output(3));
+            ozan.Name = "OZİ";
+            Console.WriteLine(ozan.FullName);
         }
     }
 }   
