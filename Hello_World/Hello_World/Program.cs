@@ -8,14 +8,19 @@ namespace Hello_World
     {
         static void Main(string[] args)
         {
-           //oop
-            // (person)
-            //  class ---> Object(ozan)
-            //   |(instantiation)
-            //   |
-            //   Object(ceren)
+            // creating a class and instantiating an object
 
-            //field - class level variable
+            Program myProgram = new Program();//instantiate
+            myProgram.DoSomething();        
+        }
+        public void DoSomething()
+        {
+            //ı m doing something
+            User ozan = new User();
+            ozan.Name = "Ozan";
+            ozan.SurName = "ustundag";
+            ozan.age = 12;
+            Console.WriteLine(ozan.Name +" "+ozan.SurName + ozan.age);
         }
     }
 }   
