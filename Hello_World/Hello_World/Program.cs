@@ -20,7 +20,7 @@ namespace Hello_World
             ozan.Name = "Ozan";
             ozan.SurName = "ustundag";
             ozan.age = 12;
-            Console.WriteLine(ozan.Name +" "+ozan.SurName + ozan.age);
+            Console.WriteLine(ozan.Output(3));
         }
     }
 }   
