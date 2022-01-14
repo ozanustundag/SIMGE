@@ -8,23 +8,13 @@ namespace Hello_World
     {
         static void Main(string[] args)
         {
-            //convert between list and array
-            List<string> movies = new List<string> { "pulp fiction", "dark knight rises" };
-            string[] myArray = movies.ToArray();
-            foreach (string movie in myArray)
+            //Methods to Sort and Reverse List
+            List<string> myGames = new List<string> { "last of us", "gow", "rdr2" };
+            myGames.Sort();
+            myGames.Reverse();
+            foreach (string games in myGames )
             {
-                Console.WriteLine(movie + "\n");
-            }
-            int[][] myLuckyNumbers =
-            {
-               new int[] {5,2,8,9},
-               new int[] {45,88,78},
-               new int[] {4,7}
-            };
-            List<int> myNewList = myLuckyNumbers[1].ToList();
-            foreach (int numbers in myNewList)
-            {
-                Console.WriteLine(numbers + "\n");
+                Console.WriteLine(games);
             }
         }
     }
