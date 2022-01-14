@@ -15,13 +15,25 @@ namespace Hello_World
         }
         public void DoSomething()
         {
-            //ı m doing something
             User ozan = new User();
-           // ozan.Name = "Ozan";
+
             ozan.SurName = "ustundag";
             ozan.age = 12;
             ozan.Name = "OZİ";
-            Console.WriteLine(ozan.FullName);
+
+            User aslı = new User();
+
+            aslı.Name = "aslı";
+            aslı.SurName = "cringe";
+
+            List<User> users = new List<User>();
+            users.Add(ozan); users.Add(aslı);
+
+            foreach (User usersInfo in users)
+            {
+                Console.WriteLine(usersInfo.FullName);
+            }
+
         }
     }
 }   

@@ -33,7 +33,7 @@ namespace Hello_World
         public string FullName {
             get 
             {
-                return _name + " "+_surName;
+                return _name + " " + _surName;
             }
         }
 
