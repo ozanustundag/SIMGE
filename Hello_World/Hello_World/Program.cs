@@ -8,42 +8,37 @@ namespace Hello_World
     {
         static void Main(string[] args)
         {
-            //Lists
+            //nested foreach loop
 
-            List<int> grades = new List<int>() { 5, 10, 26, 45, 54, 68, 68,26 };
-
-            foreach (int grade in grades.ToArray())
+            List<List<int>> studentGrades = new List<List<int>>() {
+            new List<int> {5,10 },
+            new List<int>{26,45,54},
+            new List<int>{1},
+            new List<int>{68,68,26}
+            };
+            foreach (List<int> grade in studentGrades)
             {
-                Console.WriteLine(grade);
+                foreach (int grades in grade)
+                {
+                    Console.WriteLine(grades + "\t");
+                }
+                Console.WriteLine();    
             }
-//-------------------------------------------
-            //for (int i = 0; i < grades.Count; i++)
-            //{
-            //    grades[i] *= 2;
-            //   Console.WriteLine( grades[i]);
-            //}
-//-------------------------------------------
-            //List<int> grades2 = new List<int>() { 5, 10, 26, 45, 54, 68, 68, 26 };
-            //if (grades.SequenceEqual(grades2))
-            //{
-            //    Console.WriteLine("Equal");
-           
-            //}
-// ------------------------------------------
-            //if (grades.Contains(5))
-            //{
-            //    Console.WriteLine("found");
-            //}
-//-------------------------------------------
-            //if (grades.IndexOf(23) == -1)
-            //{
-            //    Console.WriteLine("true");
-            //}
-//-------------------------------------------
-            //if (grades.LastIndexOf(26)==7)
-            //{
-            //    Console.WriteLine("true2");
-            //}
+
+            int[][] studentGrades2 = {
+               new int[] {2,4},
+                new int [] {3,4,6},
+                new int [] {4,9,45 }
+            };
+
+            foreach (int[] grade in studentGrades2)
+            {
+                foreach (int grades in grade)
+                {
+                    Console.WriteLine(grades+" ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }   
