@@ -16,9 +16,13 @@ namespace Hello_World
             ozan.SurName = "belçika";
             User asli = new User();
             asli.Name = "ozan";
-            asli.SurName = "belçika";
+            asli.SurName = "asli";
+            List<User> users = new List<User>() { ozan, asli };
+            User search = new User();
+            search.Name = "ozan";
+            search.SurName = "belçika";
 
-            Console.WriteLine(ozan.Equals(asli));
+            Console.WriteLine(User.Find(users,search));
 
         }
         public void DoSomething()

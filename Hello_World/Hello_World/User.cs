@@ -72,6 +72,17 @@ namespace Hello_World
             }
             return -1;
         }
+        public static int Find(List<User> users,User user)
+        {
+            for (int i = 0; i < users.Count; i++)
+            {
+                if (users[i].Equals(user))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
         public override string ToString()
         {
             return FullName;
@@ -84,6 +95,7 @@ namespace Hello_World
             }
             return false;
         }
+
 
     }
 }
