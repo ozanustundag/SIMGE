@@ -46,5 +46,16 @@ namespace Hello_World
             }
             return message;
         }
+        public static void PrintUser(User user)
+        {
+            Console.WriteLine(user.FullName);
+        }
+        public static void PrintUsers(List<User> users)
+        {
+            foreach (var user in users)
+            {
+                Console.WriteLine(user.FullName);
+            }
+        }
     }
 }

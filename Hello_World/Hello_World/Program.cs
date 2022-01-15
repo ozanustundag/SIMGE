@@ -7,15 +7,21 @@ namespace Hello_World
     class Program
     {
         static void Main(string[] args)
-        { 
-            // using custom types as arguments
-            Program myProgram = new Program();
-            //myProgram.DoSomething();
+        {
+            //static methods -- these methods dont related with instance. you can acces them directly using dot operator.
+            // class ------> obj obj.method
+            //       ------> obj
+            // class.method*
             User ozan = new User();
-            ozan.Name = "ozan";
-            ozan.SurName = "karadağ";
-            myProgram.TakeUser(ozan);
-            Console.WriteLine(ozan.FullName);
+            ozan.Name = "ozi";
+            ozan.SurName = "blablabla";
+            //User.PrintUser(ozan);
+            User sila = new User();
+            sila.Name = "ayşe";
+            sila.SurName = "baytar";
+            List<User> users = new List<User>() { ozan,sila};
+            User.PrintUsers(users);
+
         }
         public void DoSomething()
         {
