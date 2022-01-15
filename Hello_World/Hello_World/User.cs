@@ -100,6 +100,10 @@ namespace Hello_World
             }
             return -1;
         }
+        public virtual void HelloToConsole()
+        {
+            Console.WriteLine("hello my name is " + Name);
+        }
 
         public override string ToString()
         {
@@ -117,5 +121,6 @@ namespace Hello_World
         {
             return FullName.GetHashCode();
         }
+        
     }
 }

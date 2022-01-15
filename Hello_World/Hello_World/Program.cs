@@ -10,7 +10,7 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            // Referance and Value Types
+            // Inherit and Override Methods
 
             User ozan = new User();
             ozan.Name = "ozan";
@@ -26,21 +26,13 @@ namespace Hello_World
             search.Name = "ozan";
             search.SurName = "belçika";
 
-            int number = 5;
-            Test(number);
-            Test(search);
-            //Console.WriteLine(number + search.Name);
+            Student george = new Student();
+            george.Name = "george";
+
+            george.HelloToConsole();
+          
         }
-        public static void Test(int x)
-        {
-            x++;
-        }
-        public static void Test( User user)
-        {
-           // user = new User();
-            Console.WriteLine(user.Name);
-            //user.Name = "ozi";
-        }
+   
         public void DoSomething()
         {
             List<string> firstNames = new List<string>() { "ozan", "kadir", "ömer" };
