@@ -10,18 +10,13 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            // Default Constructor
+            // Custom Constructor
 
-            Student george = new Student();
-            george.Name = "george";
-
-            Teacher sally = new Teacher();
-            sally.Name = "muallim";
-
-          
-          
-        }
-   
+            Student george = new Student("Talebe","karabaş");           
+            Teacher sally = new Teacher("muallim","evgar");
+            george.HelloToConsole();
+            sally.HelloToConsole();                               
+        }  
         public void DoSomething()
         {
             List<string> firstNames = new List<string>() { "ozan", "kadir", "ömer" };
