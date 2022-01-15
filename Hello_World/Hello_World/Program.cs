@@ -15,24 +15,17 @@ namespace Hello_World
         }
         public void DoSomething()
         {
-            User ozan = new User();
+            List<string> firstNames = new List<string>() { "ozan", "kadir", "ömer" };
+            List<string> lastNNames = new List<string>() { "karadağ", "belçika", "kanada" };
 
-            ozan.SurName = "ustundag";
-            ozan.age = 12;
-            ozan.Name = "OZİ";
-
-            User aslı = new User();
-
-            aslı.Name = "aslı";
-            aslı.SurName = "cringe";
-
-            List<User> users = new List<User>();
-            users.Add(ozan); users.Add(aslı);
-
-            foreach (User usersInfo in users)
+            for (int i = 0; i <firstNames.Count; i++)
             {
-                Console.WriteLine(usersInfo.FullName);
+                User user = new User();
+                user.Name = firstNames[i];
+                user.SurName = lastNNames[i];
+                Console.WriteLine(user.FullName);
             }
+           
 
         }
     }
