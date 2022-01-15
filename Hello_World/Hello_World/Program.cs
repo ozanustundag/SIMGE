@@ -10,7 +10,7 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            // Polymorphishm
+            // Default Constructor
 
             Student george = new Student();
             george.Name = "george";
@@ -18,12 +18,7 @@ namespace Hello_World
             Teacher sally = new Teacher();
             sally.Name = "muallim";
 
-            List<User> users = new List<User>() { george, sally };
-
-            foreach (var user in users)
-            {
-                user.HelloToConsole();
-            }
+          
           
         }
    

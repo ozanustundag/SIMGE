@@ -6,6 +6,10 @@ namespace Hello_World
 {
     public abstract class User
     {
+        public User()
+        {
+            Console.WriteLine("user created");
+        }
          string _name ;
         string _surName;
 
