@@ -10,16 +10,20 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            // Abstract Method
-
-       
-            
-          
+            // Polymorphishm
 
             Student george = new Student();
             george.Name = "george";
 
-            george.HelloToConsole();
+            Teacher sally = new Teacher();
+            sally.Name = "muallim";
+
+            List<User> users = new List<User>() { george, sally };
+
+            foreach (var user in users)
+            {
+                user.HelloToConsole();
+            }
           
         }
    
@@ -30,16 +34,16 @@ namespace Hello_World
             List<User> users = new List<User>();
             for (int i = 0; i <firstNames.Count; i++)
             {
-                User user = new User();
-                user.Name = firstNames[i];
-                user.SurName = lastNNames[i];
-                users.Add(user);
+                //User user = new User();
+                //user.Name = firstNames[i];
+                //user.SurName = lastNNames[i];
+                //users.Add(user);
                 //Console.WriteLine(user.FullName);
             }
         }
         public void TakeUser(User user)
         {
-            user = new User();
+            //user = new User();
             user.Name = "selami";
             Console.WriteLine(user.FullName);
         }
