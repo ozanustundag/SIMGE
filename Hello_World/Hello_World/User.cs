@@ -112,8 +112,5 @@ namespace Hello_World
         {
             return FullName.GetHashCode();
         }
-        
-
-
     }
 }
