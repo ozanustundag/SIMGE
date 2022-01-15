@@ -8,20 +8,13 @@ namespace Hello_World
     {
         static void Main(string[] args)
         {
-            //static methods -- these methods dont related with instance. you can acces them directly using dot operator.
-            // class ------> obj obj.method
-            //       ------> obj
-            // class.method*
+            //Method Overloading and Default Parameters
             User ozan = new User();
-            ozan.Name = "ozi";
-            ozan.SurName = "blablabla";
-            //User.PrintUser(ozan);
-            User sila = new User();
-            sila.Name = "ayşe";
-            sila.SurName = "baytar";
-            List<User> users = new List<User>() { ozan,sila};
-            User.PrintUsers(users);
-
+            ozan.Name = "dads";
+            ozan.SurName = "sdadasd";
+          Console.WriteLine(  ozan.Output(1));
+           Console.WriteLine( ozan.Output());
+            
         }
         public void DoSomething()
         {

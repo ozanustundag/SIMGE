@@ -6,7 +6,7 @@ namespace Hello_World
 {
     class User
     {
-         string _name;
+         string _name ;
         string _surName;
 
         public string Name {
@@ -42,9 +42,13 @@ namespace Hello_World
             string message = "";
             for (int i = 0; i < x; i++)
             {
-              message +=  " " + SurName + age +"\n ";
+              message += FullName+"\n ";
             }
-            return message;
+            return message ;
+        }
+        public string Output()
+        {
+            return FullName ;
         }
         public static void PrintUser(User user)
         {
