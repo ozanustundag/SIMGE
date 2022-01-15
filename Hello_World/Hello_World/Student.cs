@@ -8,9 +8,10 @@ namespace Hello_World
             Console.WriteLine("student created");
         }
 
-        public Student(string name , string surName)
+        public Student(string name, string surName) :base (name,surName)
         {
-            Name = name; SurName = surName;
+            
+
         }
 
         public override void HelloToConsole()

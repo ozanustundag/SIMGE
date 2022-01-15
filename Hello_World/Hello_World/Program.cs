@@ -10,7 +10,7 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            // Custom Constructor
+            //Constructors to Assign to Read Only Properties
 
             Student george = new Student("Talebe","karabaş");           
             Teacher sally = new Teacher("muallim","evgar");
@@ -34,7 +34,7 @@ namespace Hello_World
         public void TakeUser(User user)
         {
             //user = new User();
-            user.Name = "selami";
+            //user.Name = "selami";
             Console.WriteLine(user.FullName);
         }
     }

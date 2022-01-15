@@ -10,7 +10,12 @@ namespace Hello_World
         {
             Console.WriteLine("user created");
         }
-         string _name ;
+        public User(string name, string surName)
+        {
+            Name = name; SurName = surName;
+
+        }
+        string _name ;
         string _surName;
 
         public bool Verified
@@ -18,27 +23,10 @@ namespace Hello_World
             get;
             set;
         } = false;
-        public string Name {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value.ToLower();
-            }
-        }
+        public string Name { get; }
+        public string SurName { get; }
         public int Age { get; set; }
-        public string SurName {
-            get
-            {
-                return _surName;
-            }
-            set 
-            {
-                _surName = value;
-            }             
-        }
+      
         public string FullName {
             get 
             {

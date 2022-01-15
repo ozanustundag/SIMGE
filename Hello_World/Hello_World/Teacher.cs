@@ -3,9 +3,9 @@ namespace Hello_World
 {
     public class Teacher : User
     {
-        public Teacher(string name , string surName)
+        public Teacher(string name, string surName) : base(name,surName)
         {
-            Name =name; SurName = surName;
+            
 
         }
 
