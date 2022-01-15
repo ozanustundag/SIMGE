@@ -4,11 +4,16 @@ using System.Text;
 
 namespace Hello_World
 {
-    class User
+    public class User
     {
          string _name ;
         string _surName;
 
+        public bool Verified
+        {
+            get;
+            set;
+        } = false;
         public string Name {
             get
             {
@@ -19,7 +24,7 @@ namespace Hello_World
                 _name = value.ToLower();
             }
         }
-        public int age { get; set; }
+        public int Age { get; set; }
         public string SurName {
             get
             {
