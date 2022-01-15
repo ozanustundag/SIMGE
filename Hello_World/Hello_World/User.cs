@@ -61,5 +61,16 @@ namespace Hello_World
                 Console.WriteLine(user.FullName);
             }
         }
+        public static int Find(List<User> users,string fullName)
+        {
+            for (int i = 0; i < users.Count; i++)
+            {
+                if (users[i].FullName == fullName)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }

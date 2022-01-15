@@ -8,13 +8,19 @@ namespace Hello_World
     {
         static void Main(string[] args)
         {
-            //Method Overloading and Default Parameters
+            //Searching a List for Custom Object
             User ozan = new User();
-            ozan.Name = "dads";
-            ozan.SurName = "sdadasd";
-          Console.WriteLine(  ozan.Output(1));
-           Console.WriteLine( ozan.Output());
-            
+            User ali = new User();
+            User aleyna = new User();
+            ozan.Name = "ozan";
+            ozan.SurName = "ustundag";
+            ali.Name = "adsasd";
+            ali.SurName = "asdasd";
+            aleyna.Name = "aleyna";
+            List<User> users = new List<User>() { aleyna, ozan, ali };
+           Console.WriteLine( User.Find(users, "ozan ustundag"));
+
+
         }
         public void DoSomething()
         {
