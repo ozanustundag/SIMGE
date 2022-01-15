@@ -6,20 +6,19 @@ namespace Hello_World
 {
     class Program
     {
+        public static object user { get; private set; }
+
         static void Main(string[] args)
         {
-            //Searching a List for Custom Object
+            // override equals
             User ozan = new User();
-            User ali = new User();
-            User aleyna = new User();
             ozan.Name = "ozan";
-            ozan.SurName = "ustundag";
-            ali.Name = "adsasd";
-            ali.SurName = "asdasd";
-            aleyna.Name = "aleyna";
-            List<User> users = new List<User>() { aleyna, ozan, ali };
-           Console.WriteLine( User.Find(users, "ozan ustundag"));
+            ozan.SurName = "belçika";
+            User asli = new User();
+            asli.Name = "ozan";
+            asli.SurName = "belçika";
 
+            Console.WriteLine(ozan.Equals(asli));
 
         }
         public void DoSomething()

@@ -72,5 +72,18 @@ namespace Hello_World
             }
             return -1;
         }
+        public override string ToString()
+        {
+            return FullName;
+        }
+        public override bool Equals(object obj)
+        {
+            if (FullName==((User)obj).FullName)
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }
