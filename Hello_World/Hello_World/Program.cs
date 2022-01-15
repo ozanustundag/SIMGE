@@ -10,10 +10,10 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            // Abstract Class
+            // Abstract Method
 
        
-            User search = new User(); // hata veriyor direkt abstarct oluşturmya çalışınca
+            
           
 
             Student george = new Student();

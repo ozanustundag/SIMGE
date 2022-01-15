@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hello_World
 {
-    public class User
+    public abstract class User
     {
          string _name ;
         string _surName;
@@ -100,10 +100,7 @@ namespace Hello_World
             }
             return -1;
         }
-        public virtual void HelloToConsole()
-        {
-            Console.WriteLine("hello my name is " + Name);
-        }
+        public abstract void HelloToConsole();
 
         public override string ToString()
         {
