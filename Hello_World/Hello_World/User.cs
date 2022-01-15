@@ -95,6 +95,10 @@ namespace Hello_World
             }
             return false;
         }
+        public override int GetHashCode()
+        {
+            return FullName.GetHashCode();
+        }
 
 
     }
