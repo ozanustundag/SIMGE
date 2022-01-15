@@ -50,6 +50,18 @@ namespace Hello_World
         {
             return FullName ;
         }
+
+        public  static User GetUserFromList(List<User> users, User user)
+        {
+            foreach (var u in users)
+            {
+                if (u.Equals(user))
+                {
+                    return u;
+                }
+            }
+            return null;
+        }
         public static void PrintUser(User user)
         {
             Console.WriteLine(user.FullName);
@@ -83,6 +95,7 @@ namespace Hello_World
             }
             return -1;
         }
+
         public override string ToString()
         {
             return FullName;
@@ -99,6 +112,7 @@ namespace Hello_World
         {
             return FullName.GetHashCode();
         }
+        
 
 
     }

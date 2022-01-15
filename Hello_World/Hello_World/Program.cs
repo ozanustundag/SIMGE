@@ -10,27 +10,23 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            // Override GetHashCode
+            // Returning Custom Objects
 
             User ozan = new User();
             ozan.Name = "ozan";
             ozan.SurName = "belçika";
 
-            Console.WriteLine(ozan.GetHashCode());
-
             User asli = new User();
             asli.Name = "ozan";
             asli.SurName = "asli";
 
-            Console.WriteLine(asli.GetHashCode());
-            Console.WriteLine(asli.GetHashCode() == ozan.GetHashCode());
-
+           
             List<User> users = new List<User>() { ozan, asli };
             User search = new User();
             search.Name = "ozan";
             search.SurName = "belçika";
 
-            Console.WriteLine(User.Find(users,search));
+            Console.WriteLine(User.GetUserFromList(users, search));
 
         }
         public void DoSomething()
