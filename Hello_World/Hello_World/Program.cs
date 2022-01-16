@@ -10,12 +10,17 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            //Constructors to Assign to Read Only Properties
+            //Interfaces
 
             Student george = new Student("Talebe","karabaş");           
             Teacher sally = new Teacher("muallim","evgar");
             george.HelloToConsole();
-            sally.HelloToConsole();                               
+            sally.HelloToConsole();
+            ITalk talk = new Student();
+
+            talk.TalkToConsole();
+            ((Student)talk).SurName;
+
         }  
         public void DoSomething()
         {
