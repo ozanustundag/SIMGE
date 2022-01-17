@@ -1,28 +1,42 @@
 ﻿using System;
 using System.Data;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Tutorials
 {
     class Program 
     {
-        //Virtual/Override
         static void Main (string[] args)
         {
-            Worker ozan = new Worker();
-            ozan.Name = "ozan";
-            ozan.SurName = "üstündağ";
-            Engineer tesla = new Engineer();
-            tesla.Name = "tesla";
-            tesla.SurName = "yılmaz";
-            Console.WriteLine(tesla.ToString() + tesla.Salary());
-            Console.WriteLine(ozan.ToString() + ozan.Salary());
 
+            Liste<string> liste = new Liste<string>();
+            liste.Add("ozan");
+            liste.Add("kamyon");
+            liste.Get();
 
-        }
-        
-        
-        
-
+        }        
 
     }
+    class Liste
+    {
+
+    }
+    class Liste<T> // class overloading
+    {
+        List<T> list = new List<T>();
+
+        public void Add(T element)
+        {
+            list.Add(element);
+        }
+        public void Get()
+        {
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+
 }
