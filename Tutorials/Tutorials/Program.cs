@@ -9,39 +9,30 @@ namespace Tutorials
     {
         static void Main (string[] args)
         {
-            //delegate
+            //action and func
 
-            Calculate calculate = new Calculate(Product);
-            Console.WriteLine(calculate(5, 4));
-            calculate = Sum;
-            Console.WriteLine(calculate(5, 4));
-            MyGenericDelegate<String> myGenericDelegate = new MyGenericDelegate<string>(Dictionary);
-            MyGenericDelegate<int> myGenericDelegate1 = new MyGenericDelegate<int>(number);
+            //action-- GERİYE DEĞER DÖNDÜRMEYEN(VOID) metotlar için kullanılır
+            //delegate'in geriye değer dönmeyen .net framework versiyonudur.
+
+            Action<int, string> action = new Action<int, string>(UserInfo);
+
+            action(5, "OZAN");
+
+            //func---GERİYE DEĞER döndüren(VOID) metotlar için kullanılır
+
+            Func<int, string, string> func = new Func<int, string, string>(UserInfo1);
+           Console.WriteLine( func(1, "ozi"));
 
 
         }
-        delegate void MyGenericDelegate<T>(T a);
-        delegate int Calculate(int x, int a);
 
-        static void number(int a)
+        static void UserInfo(int userId, string fullName)
         {
-
+            Console.WriteLine(userId + " "+ fullName);
         }
-        static void Dictionary(string x)
+        static string UserInfo1(int userId, string fullName)
         {
-
+            return userId + fullName;
         }
-        static int Sum(int x, int y)
-        {
-            return x + y;
-        }
-
-        static int Product(int a,int b)
-        {
-            return a * b;
-        }
-
-
-
     }
 }
