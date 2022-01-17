@@ -9,34 +9,27 @@ namespace Tutorials
     {
         static void Main (string[] args)
         {
+            //delegate
 
-            Liste<string> liste = new Liste<string>();
-            liste.Add("ozan");
-            liste.Add("kamyon");
-            liste.Get();
+            Calculate calculate = new Calculate(Product);
+            Console.WriteLine(calculate(5, 4));
+            calculate = Sum;
+            Console.WriteLine(calculate(5, 4));
+      
 
-        }        
-
-    }
-    class Liste
-    {
-
-    }
-    class Liste<T> // class overloading
-    {
-        List<T> list = new List<T>();
-
-        public void Add(T element)
+        }   
+        delegate int Calculate(int x, int a);
+        static int Sum(int x, int y)
         {
-            list.Add(element);
+            return x + y;
         }
-        public void Get()
-        {
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
-        }
-    }
 
+        static int Product(int a,int b)
+        {
+            return a * b;
+        }
+
+
+
+    }
 }
