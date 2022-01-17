@@ -2,6 +2,8 @@
 using System.Data;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
+using System.Linq;
 
 namespace Tutorials
 {
@@ -9,30 +11,56 @@ namespace Tutorials
     {
         static void Main (string[] args)
         {
-            //action and func
 
-            //action-- GERİYE DEĞER DÖNDÜRMEYEN(VOID) metotlar için kullanılır
-            //delegate'in geriye değer dönmeyen .net framework versiyonudur.
+            //  Dynamic Programming
 
-            Action<int, string> action = new Action<int, string>(UserInfo);
+            //dynamic a = 5;
+            //Console.WriteLine(a);
+            //a = "aa";
+            //Console.WriteLine(a);
 
-            action(5, "OZAN");
+            //dynamic people = new ExpandoObject();
+            //people.Name = "Ozi";
+            //people.SurName = "Üstündağ";
+            //Console.WriteLine(people.Name + " " + people.SurName);
 
-            //func---GERİYE DEĞER döndüren(VOID) metotlar için kullanılır
+            dynamic people = new ExpandoObject();
+            people.Name = "Ozark";
+            people.SurName = "kalander";
+            people.ShowName = new Action(() =>
+            {
+                Console.WriteLine("Name: " + people.Name); 
+            }
+            );
+            people.Repeat = new Func<string, string>(input =>
+             {
+                 return input;
+             });
+            //Çalıştırma işlemleri
+            //people.ShowName();
 
-            Func<int, string, string> func = new Func<int, string, string>(UserInfo1);
-           Console.WriteLine( func(1, "ozi"));
-
+            //dynamic result = people.Repeat("multi repeat");
+            //Console.WriteLine(result);
+            foreach (dynamic item in GetList())
+            {
+                Console.WriteLine("{0}{1}",item.Name,item.Idd );
+            }
 
         }
 
-        static void UserInfo(int userId, string fullName)
+        private static IEnumerable<dynamic> GetList()
         {
-            Console.WriteLine(userId + " "+ fullName);
+            List<User> users = new List<User> { new User() { FullName = "ozan Üstündağ", Id = 99 },
+            new User() { FullName = "kamil Üstündağ", Id = 99 }};
+            return from k in users
+                   select new {Name=k.FullName, Idd=k.Id};
         }
-        static string UserInfo1(int userId, string fullName)
-        {
-            return userId + fullName;
-        }
+        
+     
+    }
+    class User
+    {
+        public string FullName { get; set; }
+        public int Id { get; set; }
     }
 }
