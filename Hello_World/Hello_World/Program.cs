@@ -6,34 +6,41 @@ namespace Hello_World
 {
     class Program
     {
+        public static object user { get; private set; }
+
         static void Main(string[] args)
         {
-            // creating a class and instantiating an object
+            //Interfaces
 
-            Program myProgram = new Program();//instantiate
-            myProgram.DoSomething();        
-        }
+            Student george = new Student("Talebe","karabaş");           
+            Teacher sally = new Teacher("muallim","evgar");
+            george.HelloToConsole();
+            sally.HelloToConsole();
+            ITalk talk = new Student();
+
+            talk.TalkToConsole();
+            ((Student)talk).SurName;
+
+        }  
         public void DoSomething()
         {
-            User ozan = new User();
-
-            ozan.SurName = "ustundag";
-            ozan.age = 12;
-            ozan.Name = "OZİ";
-
-            User aslı = new User();
-
-            aslı.Name = "aslı";
-            aslı.SurName = "cringe";
-
+            List<string> firstNames = new List<string>() { "ozan", "kadir", "ömer" };
+            List<string> lastNNames = new List<string>() { "karadağ", "belçika", "kanada" };
             List<User> users = new List<User>();
-            users.Add(ozan); users.Add(aslı);
-
-            foreach (User usersInfo in users)
+            for (int i = 0; i <firstNames.Count; i++)
             {
-                Console.WriteLine(usersInfo.FullName);
+                //User user = new User();
+                //user.Name = firstNames[i];
+                //user.SurName = lastNNames[i];
+                //users.Add(user);
+                //Console.WriteLine(user.FullName);
             }
-
+        }
+        public void TakeUser(User user)
+        {
+            //user = new User();
+            //user.Name = "selami";
+            Console.WriteLine(user.FullName);
         }
     }
 }   
