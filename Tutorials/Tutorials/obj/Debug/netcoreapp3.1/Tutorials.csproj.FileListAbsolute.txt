@@ -1,0 +1,14 @@
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\bin\Debug\netcoreapp3.1\Tutorials.exe
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\bin\Debug\netcoreapp3.1\Tutorials.deps.json
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\bin\Debug\netcoreapp3.1\Tutorials.runtimeconfig.json
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\bin\Debug\netcoreapp3.1\Tutorials.runtimeconfig.dev.json
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\bin\Debug\netcoreapp3.1\Tutorials.dll
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\bin\Debug\netcoreapp3.1\Tutorials.pdb
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\obj\Debug\netcoreapp3.1\Tutorials.csproj.AssemblyReference.cache
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\obj\Debug\netcoreapp3.1\Tutorials.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\obj\Debug\netcoreapp3.1\Tutorials.AssemblyInfoInputs.cache
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\obj\Debug\netcoreapp3.1\Tutorials.AssemblyInfo.cs
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\obj\Debug\netcoreapp3.1\Tutorials.csproj.CoreCompileInputs.cache
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\obj\Debug\netcoreapp3.1\Tutorials.dll
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\obj\Debug\netcoreapp3.1\Tutorials.pdb
+C:\Users\ozanu\Desktop\SIMGE\Tutorials\Tutorials\obj\Debug\netcoreapp3.1\Tutorials.genruntimeconfig.cache
