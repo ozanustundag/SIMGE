@@ -2,41 +2,48 @@
 
 namespace Tutorials
 {
+    enum Acces
+    {
+        Admin = 1, Moderator = 5, User = 8
+    }
+    enum ShoesBrand
+    {
+        Adidas=50, Nike=250, Nixe=185
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            //ref and out parameters
-            // bu parametreler value type ların değerlerinin metot içerisinde değiştirilmesine yarıyor.
+            /*c# dilinde enum yapısı. Bu yapı yazılım dilinde enum, enumaration ya da enum sabitleri olarak
+             adlandırılır. Değişkenlerin alabilceği değerlerin sabit(belli) olduğu durumlarda programı
+            daha okunabilir hale getirmke için kullanılır. Programda birçok değişkene tek tek değer vermek yerine 
+            enum kullanılabilir.
+            */
+            //Enum
 
-            int number = 5;
-            int numberOut ;
+            Shoes shoes = new Shoes();
+            shoes.SelectBrand = ShoesBrand.Adidas;
+            shoes.SearchByBrand(ShoesBrand.Adidas);
 
-            Console.WriteLine("Before Param:" + number);
-            Param(number);
-            Console.WriteLine("Afer Param:" + number);
-            //--------------------------------------------------
-            Console.WriteLine("Before ParamOut:" + 0);
-            ParamOut(out numberOut);
-            Console.WriteLine("Afer ParamOut:" + numberOut);
-            //--------------------------------------------------
-            Console.WriteLine("Before ParamRef:" + numberOut);
-            ParamRef(ref numberOut);
-            Console.WriteLine("Afer ParamRef:" + numberOut);
+            
 
-        }
-
-        static void Param(int x)
-        {
-            x = x * 2;
-        }
-        static void  ParamOut(out int x)
-        {
-            x = 2; // out değer atamayı zorunlu kılıyor meteto içerisinde.
-        }
-        static void ParamRef(ref int x)
-        {
-            x = x+ 8;
-        }
+        }    
     }
+     class Shoes
+     {
+        public ShoesBrand SelectBrand { get; set; }
+        public  void SearchByBrand(ShoesBrand shoes)
+        {
+            if (shoes== SelectBrand)
+            {
+                Console.WriteLine("Shoes Matched");
+            }
+            else
+            {
+                Console.WriteLine("Shoes dont matched");
+            }
+        }
+     }
+
+
 }
