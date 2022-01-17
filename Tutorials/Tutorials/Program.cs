@@ -1,62 +1,76 @@
 ﻿using System;
 using System.Data;
+using PATA = ProjectA.TeamA;
+using PBTA= ProjectB.TeamA;
+
 namespace Tutorials
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
-            //Exception Handling
+            //NameSpace
 
-            int a = 8;
-            int b = 0;
-            /*  try
-              {
-                  //hata oluşabilecek kodların yazıldığı alan
-                  Console.WriteLine(a / b);
-              }
-              catch (Exception)
-              {
-                  // hata oluşunca yaılacakların yazıldığı alan
-                  Console.WriteLine("Error");
+            PATA.A a = new PATA.A();
+            a.Print();
+        }
+    }
+}
 
-              }
-            */
-            int[] numbers = new int[3] { 5, 4, 6 };
-            /*  try
-              {
-                  Console.WriteLine(numbers[5]);
-                  Console.WriteLine(a / b);
-              }
-              catch (IndexOutOfRangeException ex)
-              {
-                  Console.WriteLine(ex.Message);
-              }
-              catch(DivideByZeroException ex)
-              {
-                  Console.WriteLine(ex.Message);
-              }
-              catch(Exception ex)
-              {
-                  Console.WriteLine(ex.Message);
-              } */
-
-            try
+namespace ProjectA
+{
+    namespace TeamA
+    {
+        class A
+        {
+            public void Print()
             {
-
+                Console.WriteLine("Project A - TEAM A - CLASS A");
             }
-            catch (Exception)
+        }
+        class B
+        {
+            public void Print()
             {
-
-                throw;
+                Console.WriteLine("Project A - TEAM A - CLASS B");
             }
-            finally
+        }
+    }
+    namespace TeamB
+    {
+        class A
+        {
+            public void Print()
             {
-                //hata olsa da olmasa da çalışır. hata olduğunda halledeilmesi gereken son işlemler burada yapılır
-                //ve hata fırlatılır.
+                Console.WriteLine("Project A - TEAM B - CLASS A");
             }
-        }     
+        }
+        class B
+        {
+            public void Print()
+            {
+                Console.WriteLine("Project A - TEAM A - CLASS B");
+            }
+        }
+    }
+}
+namespace ProjectB
+{
+    namespace TeamA
+    {
+        class A
+        {
+            public void Print()
+            {
+                Console.WriteLine("Project B - TEAM A - CLASS A");
+            }
+        }
+        class B
+        {
+            public void Print()
+            {
+                Console.WriteLine("Project B - TEAM A - CLASS B");
+            }
+        }
     }
 }
