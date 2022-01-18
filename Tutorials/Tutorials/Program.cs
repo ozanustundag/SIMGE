@@ -19,29 +19,54 @@ namespace Tutorials
             Örneğin programın çalışma anında farklı bir dll dosyasınu uygulama içerisine dahil
             ederek içerisindeki meot ve dışarı açık nesnleri kulallanabilmemizi sağlar.
              */
-            User user = new User() { ID = 54, Name_k = "Ozan" };
-            var props = user.GetType().GetProperties();
-            foreach (var item in props)
+            Type t = typeof(MyClass);
+            Console.WriteLine("Class that we are lookin for: " + t.Name);
+            Console.WriteLine("Methods that supperted by this class:\n");
+
+            MethodInfo[] methods = t.GetMethods();
+
+            foreach (MethodInfo methodInfo in methods)
             {
-                Console.WriteLine(item.Name);
-                Console.WriteLine(item.GetValue(user));
-            }
-            var prop1 = user.GetType().GetProperty("ID");
-            Console.WriteLine( prop1.Name);
-            Console.WriteLine(prop1.GetValue(user));
+                Console.WriteLine("Method Name: " + methodInfo.Name);
+                Console.WriteLine("Method Return Type: " + methodInfo.ReturnType.Name);
+                
+                ParameterInfo[] parameters = methodInfo.GetParameters();
 
-
+                for (int i = 0; i < parameters.Length; i++)
+                {
+                    Console.WriteLine("Paramater Type: "+
+                   parameters[i].ParameterType.Name +" Parameter Name: "+ parameters[i].Name);
+                }
+                Console.WriteLine("**************");
+            }       
         }
-        public class User
+        public class MyClass
         {
-            public int ID { get; set; }
-            public string Name_k { get; set; }
-        }
-
-
-
-
-          
+            int x;
+            int y;
+            public MyClass(int i, int j)
+            {
+                x = i;
+                y = j;
+            }
+            public int Sum()
+            {
+                return x + y;
+            }
+            public bool IsBetween(int i)
+            {
+                if (x < i && i < y)
+                {
+                    return true;
+                }
+                else return false;
+            }
+            public void Set(double a,double b)
+            {
+                x = (int)a;
+                y = (int)b;
+            }
+        } 
     }
     
 }
