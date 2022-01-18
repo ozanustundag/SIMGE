@@ -19,25 +19,29 @@ namespace Tutorials
             Örneğin programın çalışma anında farklı bir dll dosyasınu uygulama içerisine dahil
             ederek içerisindeki meot ve dışarı açık nesnleri kulallanabilmemizi sağlar.
              */
-            Student student = new Student() { _name="Ozan",_surName ="Üstündağ"};
-            Type studentType = typeof(Student);
-
-            FieldInfo[] studentFields = studentType.GetFields(BindingFlags.Public | BindingFlags.Instance);
-            foreach (var studentField in studentFields)
+            User user = new User() { ID = 54, Name_k = "Ozan" };
+            var props = user.GetType().GetProperties();
+            foreach (var item in props)
             {
-                Console.WriteLine("Field: " + studentField.Name);
-                Console.WriteLine("Value: " + studentField.GetValue(student));
-                Console.WriteLine("*************");
+                Console.WriteLine(item.Name);
+                Console.WriteLine(item.GetValue(user));
             }
-            
+            var prop1 = user.GetType().GetProperty("ID");
+            Console.WriteLine( prop1.Name);
+            Console.WriteLine(prop1.GetValue(user));
 
 
         }
+        public class User
+        {
+            public int ID { get; set; }
+            public string Name_k { get; set; }
+        }
+
+
+
+
+          
     }
-    class Student
-    {
-        public string _name;
-        public string _surName;
-        string email;
-    }
+    
 }
