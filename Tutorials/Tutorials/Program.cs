@@ -19,21 +19,25 @@ namespace Tutorials
             Örneğin programın çalışma anında farklı bir dll dosyasınu uygulama içerisine dahil
             ederek içerisindeki meot ve dışarı açık nesnleri kulallanabilmemizi sağlar.
              */
-            string path = @"C:\Windows\Microsoft.NET\Framework\v2.0.50727\system.dll";
-            Assembly assembly = Assembly.LoadFile(path);
-            AsmShowInfo(assembly);
-            Assembly ourAsm = Assembly.GetExecutingAssembly();
-            AsmShowInfo(ourAsm);
+            Student student = new Student() { _name="Ozan",_surName ="Üstündağ"};
+            Type studentType = typeof(Student);
+
+            FieldInfo[] studentFields = studentType.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            foreach (var studentField in studentFields)
+            {
+                Console.WriteLine("Field: " + studentField.Name);
+                Console.WriteLine("Value: " + studentField.GetValue(student));
+                Console.WriteLine("*************");
+            }
+            
 
 
         }
-        static void AsmShowInfo(Assembly asm)
-        {
-            Console.WriteLine("-------------");
-            Console.WriteLine(asm.FullName);
-            Console.WriteLine("In Gac? =" + (asm.GlobalAssemblyCache ? "True":"False"));
-            Console.WriteLine("Path: " + asm.Location);
-            Console.WriteLine("Version: " + asm.ImageRuntimeVersion);
-        }
+    }
+    class Student
+    {
+        public string _name;
+        public string _surName;
+        string email;
     }
 }
