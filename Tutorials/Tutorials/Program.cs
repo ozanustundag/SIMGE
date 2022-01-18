@@ -19,26 +19,18 @@ namespace Tutorials
             Örneğin programın çalışma anında farklı bir dll dosyasınu uygulama içerisine dahil
             ederek içerisindeki meot ve dışarı açık nesnleri kulallanabilmemizi sağlar.
              */
+
+
             Type t = typeof(MyClass);
-            Console.WriteLine("Class that we are lookin for: " + t.Name);
-            Console.WriteLine("Methods that supperted by this class:\n");
+            MyClass reflect = new MyClass(10, 20);
+            int val;
 
-            MethodInfo[] methods = t.GetMethods();
+            Console.WriteLine("Kullanılan Sınıf: " + t.Name);
+            Console.WriteLine();
+            MethodInfo[] mi = t.GetMethods();
 
-            foreach (MethodInfo methodInfo in methods)
-            {
-                Console.WriteLine("Method Name: " + methodInfo.Name);
-                Console.WriteLine("Method Return Type: " + methodInfo.ReturnType.Name);
-                
-                ParameterInfo[] parameters = methodInfo.GetParameters();
 
-                for (int i = 0; i < parameters.Length; i++)
-                {
-                    Console.WriteLine("Paramater Type: "+
-                   parameters[i].ParameterType.Name +" Parameter Name: "+ parameters[i].Name);
-                }
-                Console.WriteLine("**************");
-            }       
+
         }
         public class MyClass
         {
@@ -63,8 +55,21 @@ namespace Tutorials
             }
             public void Set(double a,double b)
             {
+                Console.Write("İnside Set(double,double).");
                 x = (int)a;
                 y = (int)b;
+                Show();
+            }
+            public void Set(int a,int b)
+            {
+                Console.Write("İnside Set(int,int).");
+                x = a;
+                y = b;
+                Show();
+            }
+            public void Show()
+            {
+                Console.WriteLine("Values are : {0},{1}", x, y);
             }
         } 
     }
