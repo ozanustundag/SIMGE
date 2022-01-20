@@ -28,6 +28,7 @@ public class Events : MonoBehaviour
         myEvent += Method1;
         myEvent();
         unityEvent.Invoke();
+        SingletonScript.Instance.Method5();
     }
     private void OnDisable()
     {
