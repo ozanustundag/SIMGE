@@ -8,17 +8,23 @@ namespace UdemyTutorials1
     {
         static void Main(string[] args)
         {
-            //Interface
-            //fieldları olmaz
-            Student ozan = new Student("ozan","üstündağ",5);
-            Engineer elon = new Engineer();
-            Teacher kemal = new Teacher("tesla", "ediosn", 5);
-       
-            List<Person> schoolMembers = new List<Person>() { ozan, kemal };
-            Console.WriteLine(kemal.Name + " " + kemal.SurName + " " + kemal.Salary +"Bus Price:"+kemal.BusTicketPrice());
+            //Static
+            Product product = new Product();
+            Product product1 = new Product();
+            Console.WriteLine(Product.StaticMethod());
+            Console.WriteLine(product.normalMethod());
+            Console.WriteLine(product1.normalMethod());
 
-            Console.WriteLine(ozan.Name + " "+ozan.SurName +" "+ ozan.Age + "Bus Price:" + ozan.BusTicketPrice());
-            List<ISchoolMember> schoolMembers1 = new List<ISchoolMember>() { ozan, kemal /*elon*/ };//elon eklersem hata veriyor
+            Product product2 = new Product();
+            Product product3 = new Product();
+            Console.WriteLine(product2.normalMethod());
+            Console.WriteLine(product3.normalMethod());
+
+            Console.WriteLine(Product.StaticMethod());
+
+
+        //    Static_Product static_Product = new Static_Product();//static class ın nesne örneğini oluşturamam.
+
         }
     }
 }
