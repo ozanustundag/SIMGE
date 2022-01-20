@@ -8,21 +8,13 @@ namespace UdemyTutorials1
     {
         static void Main(string[] args)
         {
-            // ref types and value types
+            // Default Value Parameter
 
-            int a = 5;
-            int b = a;
-            Console.WriteLine(a);
-            a++;
-            Console.WriteLine(b);
-
-            string[] c = { "Ozan", "kerem" };
-            string[] d = c;
-            c[0] ="aslı";
-            Console.WriteLine(c[0]);
-            
-            Console.WriteLine(d[0]);
-
+            Console.WriteLine(Sum());
+        }
+        static int Sum(int a =6,int b= 4)
+        {
+            return a + b;
         }
     }
 }
