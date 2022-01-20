@@ -8,7 +8,7 @@ namespace UdemyTutorials1
     {
         static void Main(string[] args)
         {
-            //Inheritance
+            //Polymorphisim
             Student ozan = new Student();
             ozan.Name = "OZAN";
             ozan.SurName = "kayseri";
@@ -19,6 +19,7 @@ namespace UdemyTutorials1
                 SurName = "Atatürk",
                 Salary = 5
             };
+            List<Person> schoolMembers = new List<Person>() { ozan, kemal };
             Console.WriteLine(kemal.Name + " " + kemal.SurName + " " + kemal.Age);
 
             Console.WriteLine(ozan.Name + " "+ozan.SurName +" "+ ozan.Age);
