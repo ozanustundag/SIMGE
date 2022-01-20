@@ -4,8 +4,8 @@ using System.Text;
 
 namespace UdemyTutorials1
 {
-    class Student:Person
+    class Teacher :Person
     {
-        public int Class { get; set; }
+        public decimal Salary { get; set; }
     }
 }
