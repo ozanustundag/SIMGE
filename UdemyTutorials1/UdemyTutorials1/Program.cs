@@ -8,13 +8,18 @@ namespace UdemyTutorials1
     {
         static void Main(string[] args)
         {
-            // Default Value Parameter
+            // Params Keyword
 
-            Console.WriteLine(Sum());
+            Console.WriteLine(Sum(4,8,99,8));
         }
-        static int Sum(int a =6,int b= 4)
+        static int Sum(params int[] numbers)
         {
-            return a + b;
+            int result = 0;
+            foreach (var item in numbers)
+            {
+                result += item;
+            }
+            return result;
         }
     }
 }
