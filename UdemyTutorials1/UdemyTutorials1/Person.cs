@@ -33,5 +33,10 @@ namespace UdemyTutorials1
             get { return _surname; }
             set { _surname = value.ToUpper(); }
         }
+
+        virtual public int BusTicketPrice()
+        {
+            return 1;
+        }
     }
 }
