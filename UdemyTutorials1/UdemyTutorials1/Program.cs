@@ -8,7 +8,10 @@ namespace UdemyTutorials1
     {
         static void Main(string[] args)
         {
-            //Constructors
+            //Abstract //sealed
+            // abstract bu classların görevi diğer sınıflara miras vermektir. nesne örneği oluşturulamaz.
+            // selaed lanmış classlar miras verilemez
+            //abstract metotlar kesinlikle ezilmesi gerekiyor
             Student ozan = new Student("ozan","üstündağ",5);
             //ozan.Name = "OZAN";
             //ozan.SurName = "kayseri";

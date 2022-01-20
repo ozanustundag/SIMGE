@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UdemyTutorials1
 {
-    class Teacher :Person
+   sealed class Teacher :Person
     {
         public Teacher(string name, string surName, int age)
         {
@@ -16,7 +16,7 @@ namespace UdemyTutorials1
         public decimal Salary { get; set; }
         public override int BusTicketPrice()
         {
-            return base.BusTicketPrice()*5;
+            return 5;
         }
     }
     

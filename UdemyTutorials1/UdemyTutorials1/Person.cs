@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UdemyTutorials1
 {
-    class Person
+    abstract class Person
     {
         int _age;
         string _name;
@@ -34,9 +34,7 @@ namespace UdemyTutorials1
             set { _surname = value.ToUpper(); }
         }
 
-        virtual public int BusTicketPrice()
-        {
-            return 1;
-        }
+        abstract public int BusTicketPrice();
+       
     }
 }
