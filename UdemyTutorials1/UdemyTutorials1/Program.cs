@@ -8,21 +8,20 @@ namespace UdemyTutorials1
     {
         static void Main(string[] args)
         {
-            //Dictionary 
-            Dictionary<int, string> myDic = new Dictionary<int, string>() { {1, "ozan" },{ 5,"Aslı"} };
+            // ref types and value types
 
-            foreach (var x in myDic)
-            {
-                Console.WriteLine(x.Key + "=" + x.Value);
-            }
-            //Queue
-            Queue<string> myQue = new Queue<string>();
-            myQue.Enqueue("ankara");
-            myQue.Enqueue("izmir");
-            for (int i = 0; i < myQue.Count; i++)
-            {
-                Console.WriteLine(myQue.Dequeue());
-            }
+            int a = 5;
+            int b = a;
+            Console.WriteLine(a);
+            a++;
+            Console.WriteLine(b);
+
+            string[] c = { "Ozan", "kerem" };
+            string[] d = c;
+            c[0] ="aslı";
+            Console.WriteLine(c[0]);
+            
+            Console.WriteLine(d[0]);
 
         }
     }
