@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UdemyTutorials1
 {
-   sealed class Student:Person
+   sealed class Student:Person ,ISchoolMember
     {
         public Student(string name,string surName,int age)
         {
@@ -14,9 +14,16 @@ namespace UdemyTutorials1
 
         }
         public int Class { get; set; }
+        public int SchoolId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public override int BusTicketPrice()
         {
             return 2;
+        }
+
+        public void SchoolMemberInfo()
+        {
+            throw new NotImplementedException();
         }
     }
 }
