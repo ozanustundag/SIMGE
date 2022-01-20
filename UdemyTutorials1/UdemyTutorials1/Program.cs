@@ -8,16 +8,16 @@ namespace UdemyTutorials1
     {
         static void Main(string[] args)
         {
-            //Virtual and Override
-            Student ozan = new Student();
-            ozan.Name = "OZAN";
-            ozan.SurName = "kayseri";
-            ozan.Age = 5;
-            Teacher kemal = new Teacher()
+            //Constructors
+            Student ozan = new Student("ozan","üstündağ",5);
+            //ozan.Name = "OZAN";
+            //ozan.SurName = "kayseri";
+            //ozan.Age = 5;
+            Teacher kemal = new Teacher("tesla", "ediosn", 5);
             {
-                Name = "Mustafa kemal",
-                SurName = "Atatürk",
-                Salary = 5
+                //Name = "Mustafa kemal",
+                //SurName = "Atatürk",
+                //Salary = 5
             };
             List<Person> schoolMembers = new List<Person>() { ozan, kemal };
             Console.WriteLine(kemal.Name + " " + kemal.SurName + " " + kemal.Salary +"Bus Price:"+kemal.BusTicketPrice());

@@ -6,6 +6,13 @@ namespace UdemyTutorials1
 {
     class Teacher :Person
     {
+        public Teacher(string name, string surName, int age)
+        {
+            Name = name;
+            SurName = surName;
+            Age = age;
+
+        }
         public decimal Salary { get; set; }
         public override int BusTicketPrice()
         {
